@@ -5,6 +5,16 @@
 */
 
 function isAnagram(str1, str2) {
+ //Check if the two strings have different lengths
+ if (str1.length !== str2.length) {
+  return false;
+}
+
+//Sort the two strings
+var s1 = str1.toLowerCase().split('').sort().join('');
+var s2 = str2.toLowerCase().split('').sort().join('');
+//Compare the two sorted strings
+return (s1 === s2);
 
 }
 
